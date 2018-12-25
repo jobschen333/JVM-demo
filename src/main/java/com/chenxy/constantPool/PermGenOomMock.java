@@ -1,4 +1,4 @@
-package com.chenxy.demo;
+package com.chenxy.constantPool;
 
 import java.io.File;
 import java.net.URL;
@@ -31,7 +31,7 @@ public class PermGenOomMock {
                 //为什么这个东西在永久代 不是很看懂
                 ClassLoader loader = new URLClassLoader(urls);
                 classLoaderList.add(loader);
-                loader.loadClass("com.chenxy.demo.test");
+                loader.loadClass("com.chenxy.constantPool.test");
             }
         } catch (Exception e) {
             e.printStackTrace();
