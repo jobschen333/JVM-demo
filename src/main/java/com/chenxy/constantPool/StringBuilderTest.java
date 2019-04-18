@@ -9,7 +9,7 @@ public class StringBuilderTest {
     public static void main(String[] args) {
         long startTime = System.currentTimeMillis();
         String a = "1";
-        for (int i=0; i<10000; i++) {
+        for (int i=0; i<100000; i++) {
             // 性能差距如此之大 原因是因为一开始的时候 每次都要new StringBuilder
             a += "1";
         }
@@ -17,10 +17,10 @@ public class StringBuilderTest {
         System.out.println(endTime - startTime);
 
         StringBuilder b = new StringBuilder("1");
-        for (int i=0; i<10000; i++) {
+        for (int i=0; i<100000; i++) {
             // test
-            StringBuilder c = new StringBuilder("1");
-            b.append(c);
+            //StringBuilder c = new StringBuilder("1");
+            b.append("1");
         }
         long time3 = System.currentTimeMillis();
 
